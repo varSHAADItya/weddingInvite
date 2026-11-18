@@ -19,3 +19,33 @@
 .event-card h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(29px,3vw,38px);font-weight:600;line-height:1.12}.event-card .eyebrow{line-height:1.5}.event-time{font-size:13px}.event-place{font-size:25px;font-weight:600;line-height:1.15}.event-city{margin:7px 0 0;color:var(--muted);font-size:18px}.event-note{margin:13px 0 0;min-height:45px;line-height:1.35}.event-card a{margin-top:auto;padding-top:18px;font-size:10px}
 .closing h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(32px,4vw,52px);font-weight:500;line-height:1.1}.closing__names{margin-top:38px}
 @media(max-width:750px){.hero__photo{background-position:50% 25%}.hero__content{padding:24px 15px}.hero__date{font-size:10px;letter-spacing:.14em}.hero__message{font-size:21px}.person--groom .person__image img{object-position:47% 18%}.person--bride .person__image img{object-position:58% 16%}.event-card,.event-card--featured{min-height:0;padding:44px 25px 32px}.event-place{font-size:24px}.event-note{min-height:0}.event-card a{margin-top:21px}.closing h2 br{display:none}}
+
+/* Festive maroon and brighter champagne gold */
+:root{--ivory:#fffaf3;--paper:#f8eee2;--ink:#3e2025;--muted:#76585b;--gold:#a96825;--goldlight:#edc777;--line:rgba(169,104,37,.4);--dark:#481923;--shadow:0 20px 60px rgba(72,25,35,.15)}
+body{background:var(--ivory);color:var(--ink)}
+.opening{background:radial-gradient(circle at 20% 20%,#fff8eb 0 12%,transparent 30%),linear-gradient(140deg,#f1d9b1,#fff9f1 46%,#e8c477)}
+.opening__bloom{border-color:rgba(132,42,49,.23)}
+.opening__card{background:rgba(255,250,242,.82);border-color:rgba(132,42,49,.38)}
+.opening__script{color:#692630}.opening__love{color:#51232a}
+.open-button{background:#862f3a;border-color:#862f3a}.open-button:hover{color:#862f3a}
+.hero__wash{background:linear-gradient(180deg,rgba(49,13,24,.58),rgba(50,17,25,.18) 42%,rgba(49,13,24,.8))}
+.hero h1 i{color:#ffd987}.eyebrow{color:#92501e}.eyebrow.light{color:#ffe4ad}
+.paper-section{background:radial-gradient(circle at 10% 80%,rgba(206,143,55,.19),transparent 25%),var(--paper)}
+.paper-section h2,.celebrations h2,.person h2{color:#762b36}
+.people{background:#fffaf4}.person--bride{background:#f7ecdf}
+.story{background:#5b202d;color:#fff5e9}.story h2{color:#ffe3a6}.story .date-line{color:#f1dfc2}
+.celebrations{background:linear-gradient(160deg,#fffaf4,#f0dfc5)}
+.event-card{background:rgba(255,252,246,.82);border-color:rgba(150,77,43,.3)}.event-card--featured{background:#fffaf0;box-shadow:0 18px 45px rgba(91,32,45,.16)}
+.event-card h3{color:#762b36}.event-time,.event-card a{color:#87422d}.event-number{color:rgba(132,42,49,.6)}
+.closing{background:radial-gradient(circle at 50% 0,rgba(237,199,119,.24),transparent 37%),#511c29;color:#fff5e9}.closing h2{color:#fff0d5}.closing button{border-color:#edc777}.closing button:hover{background:#9a5129}
+.sound-toggle{color:#842f3a;border-color:rgba(132,47,58,.35)}
+
+/* Give the Our Story panel clearer breathing room and balanced line spacing */
+.story{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);min-height:560px}
+.story__image{min-height:560px}
+.story__copy{max-width:640px;margin:auto;padding:64px clamp(28px,6vw,82px)}
+.story__copy h2{line-height:1.08;letter-spacing:.01em}
+.story__copy .ornament{margin:22px 0}
+.story__copy>p:not(.eyebrow):not(.hashtag):not(.date-line){line-height:1.5;margin:18px auto;max-width:390px}
+.story .hashtag{margin:24px 0 10px}
+@media(max-width:750px){.story{grid-template-columns:1fr}.story__image{min-height:390px;height:390px}.story__copy{padding:54px 26px 62px}.story__copy h2{font-size:clamp(44px,12vw,64px);line-height:1.08}}
