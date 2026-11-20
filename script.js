@@ -46,3 +46,26 @@
   }, { threshold: .12 });
   document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
 }());
+
+(function () {
+  var target = new Date('2026-12-12T18:00:00+05:30').getTime();
+  var days = document.getElementById('countDays');
+  var hours = document.getElementById('countHours');
+  var minutes = document.getElementById('countMinutes');
+  var seconds = document.getElementById('countSeconds');
+  var caption = document.querySelector('.countdown__caption');
+  if (!days || !hours || !minutes || !seconds) return;
+
+  function updateCountdown() {
+    var remaining = Math.max(0, target - Date.now());
+    var totalSeconds = Math.floor(remaining / 1000);
+    days.textContent = String(Math.floor(totalSeconds / 86400));
+    hours.textContent = String(Math.floor((totalSeconds % 86400) / 3600)).padStart(2, '0');
+    minutes.textContent = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+    seconds.textContent = String(totalSeconds % 60).padStart(2, '0');
+    if (remaining === 0 && caption) caption.textContent = 'The celebration begins!';
+  }
+
+  updateCountdown();
+  window.setInterval(updateCountdown, 1000);
+}());
